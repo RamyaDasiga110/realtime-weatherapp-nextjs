@@ -131,7 +131,7 @@ export default function Home() {
       </div>
     );
   return (
-    <div className="flex flex-col gap-4 bg-gray-100 min-h-screen ">
+    <div className="flex flex-col gap-4 bg-slate-100 min-h-screen ">
       <Navbar location={data?.city.name} />
       <main className="px-3 max-w-7xl mx-auto flex flex-col gap-9  w-full  pb-10 pt-4 ">
         {/* today data  */}
@@ -141,7 +141,7 @@ export default function Home() {
           <>
             <section className="space-y-4 ">
               <div className="space-y-2">
-                <h2 className="flex gap-1 text-2xl  items-end ">
+                <h2 className="flex gap-1 text-2xl  items-end font-bold">
                   <p>{format(parseISO(firstData?.dt_txt ?? ""), "EEEE")}</p>
                   <p className="text-lg">
                     ({format(parseISO(firstData?.dt_txt ?? ""), "dd.MM.yyyy")})
@@ -211,7 +211,7 @@ export default function Home() {
                     )}
                   />
                 </Container>
-                <Container className="bg-yellow-300/80  px-6 gap-4 justify-between overflow-x-auto">
+                <Container className="bg-sky-200/80  px-6 gap-4 justify-between overflow-x-auto">
                   <WeatherDetails
                     visability={metersToKilometers(
                       firstData?.visibility ?? 10000
@@ -234,7 +234,7 @@ export default function Home() {
 
             {/* 7 day forcast data  */}
             <section className="flex w-full flex-col gap-4  ">
-              <p className="text-2xl">Forcast (7 days)</p>
+              <p className="text-2xl font-bold">Forcast (7 days)</p>
               {firstDataForEachDate.map((d, i) => (
                 <ForecastWeatherDetail
                   key={i}

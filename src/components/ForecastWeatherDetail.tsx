@@ -36,8 +36,8 @@ export default function ForecastWeatherDetail(
       <section className=" flex gap-4 items-center px-4  ">
         <div className=" flex flex-col gap-1 items-center">
           <WeatherIcon iconName={weatehrIcon} />
-          <p>{date}</p>
-          <p className="text-sm">{day} </p>
+          <p className="text-sm font-bold">{date}</p>
+          <p className="text-sm font-bold">{day} </p>
         </div>
 
         {/*  */}
